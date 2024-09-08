@@ -1,5 +1,4 @@
 import { RouterOutlet } from '@angular/router';
-import { ProfileComponent } from "./features/profile/profile.component";
 import {ToolbarComponent} from "./components/toolbar/toolbar.component";
 import { Component,inject} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -10,7 +9,7 @@ import {MatListModule} from '@angular/material/list';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,ToolbarComponent,ProfileComponent,MatDividerModule,MatListModule],
+  imports: [RouterOutlet,ToolbarComponent,MatDividerModule,MatListModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
