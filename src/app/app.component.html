@@ -1,1 +1,18 @@
-SSH TEST
+<app-toolbar (onGetProfileEvent)="onClickgetProfile()"></app-toolbar>
+<app-profile></app-profile>
+<mat-divider></mat-divider>
+<router-outlet></router-outlet>
+<mat-divider ></mat-divider>
+
+<div align="center">
+@for (user of data?.results; track user.id){
+    <mat-list-item >{{user.cell}}</mat-list-item>
+    <mat-list-item >{{user.email}}</mat-list-item>
+    <mat-list-item >{{user.location.country}}</mat-list-item>
+    <mat-list-item >{{user.gender}}</mat-list-item>
+    <mat-list-item >{{user.dob.age}}</mat-list-item>
+    <img mat-card-image src="{{user.picture.large}}" alt="Photo of a Shiba Inu">
+    
+}
+</div>
+
